@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* frame work */
+
+.container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width:375px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+
+/* var.... */
+
+:root {
+    --pink-color: hsl(322, 100%, 66%);
+    --font-size: 18px;
+    --dark-cyan: hsl(192, 100%, 9%);
+    --p-color: hsl(208, 11%, 55%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.landing {
+    background-image: url("./images/bg-hero-desktop.svg");
+    background-color: hsl(193, 100%, 96%);
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+.landing header {
+    height: 100px;
+}
+
+.landing header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.landing header .container img {
+    width: 150px;
+}
+
+@media (max-width:540px) {
+    .landing header .container img {
+        width: 100px;
+    }
+}
+
+.landing header .container a {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 5px 30px;
+    border-radius: 15px;
+    font-weight: 700;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.landing-2 .container {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:540px) {
+    .landing-2 .container {
+        flex-direction: column;
+    }
+}
+
+.landing-2 .container .text {
+    flex-basis: 50%;
+}
+
+@media (max-width:540px) {
+    .landing-2 .container .text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+
+.landing-2 .container .text h1 {
+    color: var(--dark-cyan);
+}
+
+@media (max-width:540px) {
+    .landing-2 .container .text h1 {
+        font-size: 25px;
+    }
+}
+
+.landing-2 .container .text p {
+    line-height: 1.5;
+    color: var(--p-color);
+    margin: 20px 0;
+}
+
+.landing-2 .container .text a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    background-color: var(--pink-color);
+    padding: 15px 50px;
+    border-radius: 50px;
+}
+
+@media (max-width:540px) {
+    .landing-2 .container .text a {
+        margin: 20px auto;
+    }
+}
+
+.landing-2 .container .image {
+    flex: 1;
+}
+
+@media (max-width:540px) {
+    .landing-2 .container .image {
+        flex-basis: 100%;
+    }
+}
+
+.landing-2 .container .image img {
+    width: 100%;
+}
+
+
+/* services */
+
+.services {
+    padding-top: 100px;
+    padding-bottom: 300px;
+    position: relative;
+}
+
+.services .container .box {
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+@media (max-width:540px) {
+    .services .container .box {
+        flex-direction: column;
+    }
+}
+
+.services .container .box .text {
+    flex-basis: 60%;
+    padding-left: 60px;
+}
+
+@media (max-width:540px) {
+    .services .container .box .text {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        order: 2;
+    }
+}
+
+.services .container .box .text h2 {
+    font-size: 30px;
+    color: var(--dark-cyan);
+}
+
+.services .container .box .text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 18px;
+    color: var(--p-color);
+}
+
+.services .container .box .image {
+    flex: 1;
+}
+
+@media (max-width:540px) {
+    .services .container .box .image {
+        padding: 20px;
+        order: 1;
+    }
+}
+
+.services .container .box .image img {
+    width: 100%;
+}
+
+.services .container .ready {
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+@media (max-width:540px) {
+    .services .container .ready {
+        width: 90%;
+    }
+}
+
+.services .container .ready h2 {
+    color: var(--dark-cyan);
+    margin: 20px 0 30px;
+}
+
+@media (max-width:375px) {
+    .services .container .ready h2 {
+        font-size: 18px;
+    }
+}
+
+.services .container .ready a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    background-color: var(--pink-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 80px;
+    border-radius: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media (max-width:540px) {
+    .services .container .ready a {
+        padding: 15px 30px;
+    }
+}
+
+
+/* footer */
+
+.footer {
+    padding: 200px 0 100px 0;
+    background-color: var(--dark-cyan)
+}
+
+.footer .container .flogo {
+    filter: brightness(0) invert(1);
+}
+
+.footer .container .foot-content {
+    margin: 20px 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 40px;
+}
+
+.footer .container .foot-content .box {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container .foot-content .column {
+    justify-content: space-between;
+}
+
+@media (max-width:540px) {
+    .footer .container .foot-content .column {
+        flex-direction: column-reverse;
+    }
+}
+
+.footer .container .foot-content .column ul li {
+    margin-bottom: 15px;
+}
+
+.footer .container .foot-content .box ul li {
+    display: flex;
+    align-items: center;
+}
+
+.footer .container .foot-content .box ul li img {
+    padding: 10px
+}
+
+.footer .container .foot-content .box ul li p {
+    font-size: 18px;
+}
+
+.footer .container .foot-content .box ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.footer .container .foot-content .box #icons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer .container .foot-content .box #icons li {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 10px;
+}
+
+.footer .copyright {
+    color: white;
+    text-align: end;
+}
+
+@media (max-width:540px) {
+    .footer .copyright {
+        text-align: center;
+    }
+}
